@@ -465,7 +465,7 @@ function Core({
                       onClick={() => nextQuestion(currentQuestionIndex - 2)}
                       className="prevQuestionBtn btn"
                       type="button"
-                      disabled={!isNextDisabled}
+                      disabled={isNextDisabled}
                     >
                       {appLocale.prevQuestionBtn}
                     </button>
