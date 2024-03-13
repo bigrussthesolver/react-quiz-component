@@ -10,7 +10,7 @@ import Explanation from './core-components/Explanation';
 function Core({
   questions, appLocale, showDefaultResult, onComplete, customResultPage,
   showInstantFeedback, continueTillCorrect, revealAnswerOnSubmit, allowNavigation,
-  onQuestionSubmit, timer, allowPauseTimer,
+  onQuestionSubmit, timer, allowPauseTimer, disableNext,
 }) {
   const [incorrectAnswer, setIncorrectAnswer] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -464,6 +464,7 @@ function Core({
                       onClick={() => nextQuestion(currentQuestionIndex - 2)}
                       className="prevQuestionBtn btn"
                       type="button"
+                      disabled={!disableNext}
                     >
                       {appLocale.prevQuestionBtn}
                     </button>
@@ -473,6 +474,7 @@ function Core({
                     onClick={() => nextQuestion(currentQuestionIndex)}
                     className="nextQuestionBtn btn"
                     type="button"
+                    disabled={!disableNext}
                   >
                     {appLocale.nextQuestionBtn}
                   </button>

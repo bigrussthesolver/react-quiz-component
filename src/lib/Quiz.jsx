@@ -18,6 +18,7 @@ function Quiz({
   disableSynopsis,
   timer,
   allowPauseTimer,
+  disableNext,
 }) {
   const [start, setStart] = useState(false);
   const [questions, setQuestions] = useState(quiz.questions);
