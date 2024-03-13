@@ -26,6 +26,7 @@ function Core({
   const [userAttempt, setUserAttempt] = useState(1);
   const [showDefaultResultState, setShowDefaultResult] = useState(true);
   const [answerSelectionTypeState, setAnswerSelectionType] = useState(undefined);
+  const [isNextDisabled, setIsNextDisabled] = useState(disableNext);
 
   const [totalPoints, setTotalPoints] = useState(0);
   const [correctPoints, setCorrectPoints] = useState(0);
@@ -464,7 +465,7 @@ function Core({
                       onClick={() => nextQuestion(currentQuestionIndex - 2)}
                       className="prevQuestionBtn btn"
                       type="button"
-                      disabled={!disableNext}
+                      disabled={!isNextDisabled}
                     >
                       {appLocale.prevQuestionBtn}
                     </button>
@@ -474,7 +475,7 @@ function Core({
                     onClick={() => nextQuestion(currentQuestionIndex)}
                     className="nextQuestionBtn btn"
                     type="button"
-                    disabled={!disableNext}
+                    disabled={isNextDisabled}
                   >
                     {appLocale.nextQuestionBtn}
                   </button>
