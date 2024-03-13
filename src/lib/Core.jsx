@@ -465,7 +465,7 @@ function Core({
                       onClick={() => nextQuestion(currentQuestionIndex - 2)}
                       className="prevQuestionBtn btn"
                       type="button"
-                      disabled={isNextDisabled}
+                      style={{ display: isNextDisabled ? 'none' : 'block' }}
                     >
                       {appLocale.prevQuestionBtn}
                     </button>
@@ -476,6 +476,7 @@ function Core({
                     className="nextQuestionBtn btn"
                     type="button"
                     disabled={isNextDisabled}
+                    style={{ display: isNextDisabled ? 'none' : 'block' }}
                   >
                     {appLocale.nextQuestionBtn}
                   </button>
