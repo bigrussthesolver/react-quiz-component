@@ -26,6 +26,7 @@ function Core({
   const [userAttempt, setUserAttempt] = useState(1);
   const [showDefaultResultState, setShowDefaultResult] = useState(true);
   const [answerSelectionTypeState, setAnswerSelectionType] = useState(undefined);
+  const [buttonAttributes, setButtonAttributes] = useState({});
 
   const [totalPoints, setTotalPoints] = useState(0);
   const [correctPoints, setCorrectPoints] = useState(0);
@@ -466,12 +467,16 @@ function Core({
                       type="button"
                     >
                       {appLocale.prevQuestionBtn}
+                      // eslint-disable-next-line react/jsx-props-no-spreading
+                    {...buttonAttributes}
                     </button>
                   )}
 
                   <button
                     onClick={() => nextQuestion(currentQuestionIndex)}
                     className="nextQuestionBtn btn"
+                    // eslint-disable-next-line react/jsx-props-no-spreading
+                    {...buttonAttributes}
                     type="button"
                   >
                     {appLocale.nextQuestionBtn}
