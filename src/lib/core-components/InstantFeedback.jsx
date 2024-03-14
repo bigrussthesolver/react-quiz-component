@@ -15,9 +15,13 @@ function InstantFeedback({
   showInstantFeedback, incorrectAnswer, correctAnswer, question, onQuestionSubmit, userAnswer,
 }) {
   useEffect(() => {
-    if (onQuestionSubmit && (correctAnswer || incorrectAnswer)) {
-      onQuestionSubmit({ question, userAnswer, isCorrect: correctAnswer });
-    }
+    const submitQuestion = async () => {
+      if (onQuestionSubmit && (correctAnswer || incorrectAnswer)) {
+        await onQuestionSubmit({ question, userAnswer, isCorrect: correctAnswer });
+      }
+    };
+
+    submitQuestion();
   }, [correctAnswer, incorrectAnswer]);
 
   return (
