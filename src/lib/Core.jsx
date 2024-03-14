@@ -10,7 +10,7 @@ import Explanation from './core-components/Explanation';
 function Core({
   questions, appLocale, showDefaultResult, onComplete, customResultPage,
   showInstantFeedback, continueTillCorrect, revealAnswerOnSubmit, allowNavigation,
-  onQuestionSubmit, timer, allowPauseTimer,
+  onQuestionSubmit, timer, allowPauseTimer, isQuestionSubmitComplete,
 }) {
   const [incorrectAnswer, setIncorrectAnswer] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -457,7 +457,7 @@ function Core({
                 />
               </div>
               {activeQuestion && renderAnswers(activeQuestion, buttons)}
-              {(showNextQuestionButton || allowNavigation) && (
+              {(showNextQuestionButton || allowNavigation && isQuestionSubmitComplete)  && (
                 <div className="questionBtnContainer">
                   {allowNavigation && currentQuestionIndex > 0 && (
                     <button
@@ -474,7 +474,7 @@ function Core({
                     className="nextQuestionBtn btn"
                     type="button"
                   >
-                    {appLocale.nextQuestionBtn}
+                    {appLocale.nextQuestionBtn} 
                   </button>
                 </div>
               )}

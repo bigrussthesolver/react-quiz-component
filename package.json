@@ -1,7 +1,7 @@
 {
   "name": "react-quiz-component",
-  "version": "0.8.1",
-  "description": "React Quiz Component",
+  "version": "0.8.304",
+  "description": "React Quiz Component - interCECT Fork",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {

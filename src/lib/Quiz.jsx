@@ -18,6 +18,7 @@ function Quiz({
   disableSynopsis,
   timer,
   allowPauseTimer,
+  isQuestionSubmitComplete,
 }) {
   const [start, setStart] = useState(false);
   const [questions, setQuestions] = useState(quiz.questions);
@@ -222,6 +223,7 @@ function Quiz({
           onQuestionSubmit={onQuestionSubmit}
           timer={timer}
           allowPauseTimer={allowPauseTimer}
+          isQuestionSubmitComplete={isQuestionSubmitComplete}
         />
       )}
     </div>
