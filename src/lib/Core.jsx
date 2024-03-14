@@ -10,7 +10,7 @@ import Explanation from './core-components/Explanation';
 function Core({
   questions, appLocale, showDefaultResult, onComplete, customResultPage,
   showInstantFeedback, continueTillCorrect, revealAnswerOnSubmit, allowNavigation,
-  onQuestionSubmit, timer, allowPauseTimer,
+  onQuestionSubmit, timer, allowPauseTimer, isQuestionSubmitComplete,
 }) {
   const [incorrectAnswer, setIncorrectAnswer] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -454,6 +454,7 @@ function Core({
                   incorrectAnswer={incorrectAnswer}
                   onQuestionSubmit={onQuestionSubmit}
                   userAnswer={[...userInput].pop()}
+                  isQuestionSubmitComplete={isQuestionSubmitComplete}
                 />
               </div>
               {activeQuestion && renderAnswers(activeQuestion, buttons)}
