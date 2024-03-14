@@ -475,8 +475,7 @@ function Core({
                     className="nextQuestionBtn btn"
                     type="button"
                   >
-                    {appLocale.nextQuestionBtn}
-                    {isQuestionSubmitComplete ? 'True' : 'False'}
+                    Russell
                   </button>
                 </div>
               )}
