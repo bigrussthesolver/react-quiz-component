@@ -476,6 +476,7 @@ function Core({
                     type="button"
                   >
                     {appLocale.nextQuestionBtn}
+                    {isQuestionSubmitComplete ? 'True' : 'False'}
                   </button>
                 </div>
               )}
