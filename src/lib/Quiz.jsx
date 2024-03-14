@@ -18,6 +18,7 @@ function Quiz({
   disableSynopsis,
   timer,
   allowPauseTimer,
+  isQuestionSubmitComplete,
 }) {
   const [start, setStart] = useState(false);
   const [questions, setQuestions] = useState(quiz.questions);
@@ -71,6 +72,7 @@ function Quiz({
 
   useEffect(() => {
     if (disableSynopsis) setStart(true);
+    console.log('isQuestionSubmitComplete', isQuestionSubmitComplete);
   }, []);
 
   useEffect(() => {
