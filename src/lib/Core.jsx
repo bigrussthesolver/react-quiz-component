@@ -454,6 +454,7 @@ function Core({
                   incorrectAnswer={incorrectAnswer}
                   onQuestionSubmit={onQuestionSubmit}
                   userAnswer={[...userInput].pop()}
+                  isQuestionSubmitComplete={isQuestionSubmitComplete}
                 />
               </div>
               {activeQuestion && renderAnswers(activeQuestion, buttons)}
