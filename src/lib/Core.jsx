@@ -465,7 +465,7 @@ function Core({
                       className="prevQuestionBtn btn"
                       type="button"
                     >
-                      {appLocale.prevQuestionBtn}
+                      Russell
                     </button>
                   )}
 
