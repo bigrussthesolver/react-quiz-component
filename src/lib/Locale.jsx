@@ -6,7 +6,7 @@ const defaultLocale = {
   resultFilterCorrect: 'Correct',
   resultFilterIncorrect: 'Incorrect',
   resultFilterUnanswered: 'Unanswered',
-  nextQuestionBtn: 'Next',
+  nextQuestionBtn: 'Next Boy',
   prevQuestionBtn: 'Prev',
   resultPageHeaderText: 'You have completed the quiz. You got <correctIndexLength> out of <questionLength> questions.',
   resultPagePoint: 'You scored <correctPoints> out of <totalPoints>.',
